@@ -84,4 +84,16 @@ public class InputUtil {
             System.out.println("   Vui lòng chỉ nhập y (có) hoặc n (không).");
         }
     }
+
+    public static <T extends Enum<T>> T readEnum(String prompt, Class<T> enumClass) {
+        while (true) {
+            // Tự động chuyển input thành chữ hoa để match với tên Enum
+            String input = readString(prompt).toUpperCase();
+            try {
+                return Enum.valueOf(enumClass, input);
+            } catch (IllegalArgumentException e) {
+                System.out.println("  [!] Lựa chọn không hợp lệ. Vui lòng nhập đúng tên trong ngoặc vuông.");
+            }
+        }
+    }
 }

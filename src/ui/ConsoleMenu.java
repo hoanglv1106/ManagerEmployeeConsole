@@ -1,9 +1,9 @@
 package ui;
 
-import Model.Department;
-import Model.Employee;
-import Model.EmployeeStatus;
-import Model.EmployeeType;
+import model.Department;
+import model.Employee;
+import model.EmployeeStatus;
+import model.EmployeeType;
 import service.EmployeeService;
 import exception.DataCorruptionException;
 import exception.DuplicateIdExeption; // Đã sửa tên đúng chính tả
@@ -26,13 +26,13 @@ public class ConsoleMenu {
 
     private final EmployeeService service;
 
-    // ==================== CONSTRUCTOR ====================
+    // CONSTRUCTOR
 
     public ConsoleMenu(EmployeeService service) {
         this.service = service;
     }
 
-    // ==================== MAIN LOOP ====================
+    // MAIN LOOP
 
     public void start() {
         while (true) {
@@ -60,7 +60,7 @@ public class ConsoleMenu {
         }
     }
 
-    // ==================== MENU IN RA ====================
+    // MENU IN RA
 
     private void printMainMenu() {
         System.out.println("\n" + CYAN + "=".repeat(45));
@@ -82,7 +82,7 @@ public class ConsoleMenu {
         System.out.println(CYAN + "=".repeat(45) + RESET);
     }
 
-    // ==================== CASE 1: ADD ====================
+    //CASE 1: ADD
 
     private void handleAdd() {
         System.out.println(CYAN + "\n--- THÊM NHÂN VIÊN ---" + RESET);
@@ -119,7 +119,7 @@ public class ConsoleMenu {
         }
     }
 
-    // ==================== CASE 2: UPDATE ====================
+    //CASE 2: UPDATE
 
     private void handleUpdate() {
         System.out.println(CYAN + "\n--- CẬP NHẬT NHÂN VIÊN ---" + RESET);
@@ -161,7 +161,7 @@ public class ConsoleMenu {
         }
     }
 
-    // ==================== CASE 3: REMOVE ====================
+    //CASE 3: REMOVE
 
     private void handleRemove() {
         System.out.println(CYAN + "\n--- XÓA NHÂN VIÊN ---" + RESET);
@@ -174,7 +174,7 @@ public class ConsoleMenu {
         }
     }
 
-    // ==================== CASE 4: FIND BY ID ====================
+    //CASE 4: FIND BY ID
 
     private void handleFindById() {
         System.out.println(CYAN + "\n--- TÌM THEO ID ---" + RESET);
@@ -187,7 +187,7 @@ public class ConsoleMenu {
         }
     }
 
-    // ==================== CASE 5: LIST ALL ====================
+    //CASE 5: LIST ALL
 
     private void handleListAll() {
         System.out.println(CYAN + "\n--- DANH SÁCH NHÂN VIÊN ---" + RESET);
@@ -195,7 +195,7 @@ public class ConsoleMenu {
         printEmployeeList(all);
     }
 
-    // ==================== CASE 6: SORT ====================
+    //CASE 6: SORT
 
     private void handleSort() {
         System.out.println(CYAN + "\n--- SẮP XẾP ---" + RESET);
@@ -212,7 +212,7 @@ public class ConsoleMenu {
         printEmployeeList(result);
     }
 
-    // ==================== CASE 7: SEARCH ====================
+    //CASE 7: SEARCH
 
     private void handleSearch() {
         System.out.println(CYAN + "\n--- TÌM KIẾM ---" + RESET);
@@ -238,7 +238,7 @@ public class ConsoleMenu {
         printEmployeeList(result);
     }
 
-    // ==================== CASE 8: FILTER ====================
+    //CASE 8: FILTER
 
     private void handleFilter() {
         System.out.println(CYAN + "\n--- LỌC NHÂN VIÊN ---" + RESET);
@@ -256,14 +256,14 @@ public class ConsoleMenu {
         printEmployeeList(result);
     }
 
-    // ==================== CASE 9: TOP 3 ====================
+    //CASE 9: TOP 3
 
     private void handleTop3() {
         System.out.println(CYAN + "\n--- TOP 3 LƯƠNG CAO NHẤT ---" + RESET);
         printEmployeeList(service.getTop3BySalary());
     }
 
-    // ==================== CASE 10: GROUP BY DEPT ====================
+    //CASE 10: GROUP BY DEPT
 
     private void handleGroupByDept() {
         System.out.println(CYAN + "\n--- NHÓM THEO PHÒNG BAN ---" + RESET);
@@ -278,14 +278,14 @@ public class ConsoleMenu {
         });
     }
 
-    // ==================== CASE 11: COUNT ACTIVE ====================
+    //CASE 11: COUNT ACTIVE
 
     private void handleCountActive() {
         long count = service.countActive();
         System.out.println(GREEN + "\nSố nhân viên đang ACTIVE: " + count + RESET);
     }
 
-    // ==================== CASE 12: SALARY STATS ====================
+    //CASE 12: SALARY STATS
 
     private void handleSalaryStats() {
         System.out.println(CYAN + "\n--- THỐNG KÊ LƯƠNG TỔNG THỂ ---" + RESET);
@@ -308,7 +308,7 @@ public class ConsoleMenu {
         );
     }
 
-    // ==================== HELPERS ====================
+    //HELPERS
 
     private void printError(String msg) {
         System.out.println(RED + "[LỖI] " + msg + RESET);

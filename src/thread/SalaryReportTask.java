@@ -1,7 +1,7 @@
 package thread;
 
-import Model.Department;
-import Model.Employee;
+import model.Department;
+import model.Employee;
 import service.EmployeeService;
 
 import java.time.LocalDateTime;

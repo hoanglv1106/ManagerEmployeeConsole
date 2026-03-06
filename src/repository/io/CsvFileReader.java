@@ -1,11 +1,10 @@
 package repository.io;
 
-import Model.Department;
-import Model.Employee;
-import Model.EmployeeStatus;
-import Model.EmployeeType;
+import model.Department;
+import model.Employee;
+import model.EmployeeStatus;
+import model.EmployeeType;
 import config.FileConfig;
-import java.time.format.DateTimeFormatter;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

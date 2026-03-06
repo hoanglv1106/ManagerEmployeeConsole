@@ -92,7 +92,7 @@ public class InputUtil {
             try {
                 return Enum.valueOf(enumClass, input);
             } catch (IllegalArgumentException e) {
-                System.out.println("  [!] Lựa chọn không hợp lệ. Vui lòng nhập đúng tên trong ngoặc vuông.");
+                System.out.println("  Lựa chọn không hợp lệ. Vui lòng nhập đúng tên trong ngoặc vuông.");
             }
         }
     }

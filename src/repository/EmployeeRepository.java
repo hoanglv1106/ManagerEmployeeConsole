@@ -1,12 +1,13 @@
 package repository;
 
-import Model.Employee;
+import model.Employee;
 import config.FileConfig;
 import exception.DataCorruptionException;
 import repository.io.AtomicFileWriter;
 import repository.io.CsvFileReader;
 import repository.io.RetryExecutor;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -38,7 +39,7 @@ public class EmployeeRepository {
     //CRUD
 
     public List<Employee> getAll() {
-        return employees;
+        return Collections.unmodifiableList(employees);
     }
 
     public void add(Employee employee) {

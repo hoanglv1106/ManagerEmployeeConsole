@@ -1,9 +1,9 @@
 package service;
 
-import Model.Department;
-import Model.Employee;
-import Model.EmployeeStatus;
-import Model.EmployeeType;
+import model.Department;
+import model.Employee;
+import model.EmployeeStatus;
+import model.EmployeeType;
 import exception.DataCorruptionException;
 import exception.DuplicateIdExeption;
 import repository.EmployeeRepository;
@@ -93,13 +93,6 @@ public class EmployeeService {
     public List<Employee> searchByType(EmployeeType type) {
         return repository.getAll().stream()
                 .filter(emp -> emp.getType() == type)
-                .collect(Collectors.toList());
-    }
-
-    // Tìm kiếm theo khoảng lương (Min - Max)
-    public List<Employee> searchBySalaryRange(double minSalary, double maxSalary) {
-        return repository.getAll().stream()
-                .filter(emp -> emp.getSalary() >= minSalary && emp.getSalary() <= maxSalary)
                 .collect(Collectors.toList());
     }
 

@@ -1,1 +1,7 @@
 id,name,email,phone,salary,hireDate,department,type,status
+EMP001,Nguyen Van An,an.nguyen@company.com,0901234567,1.5E7,2021-03-15,IT,FULL_TIME,ACTIVE
+EMP002,Tran Thi Bich,bich.tran@company.com,0912345678,1.2E7,2022-06-01,HR,FULL_TIME,ACTIVE
+EMP003,Le Van Cuong,cuong.le@company.com,0923456789,1.8E7,2020-01-10,IT,FULL_TIME,ACTIVE
+EMP005,Hoang Van Em,em.hoang@company.com,0945678901,2.2E7,2019-07-05,IT,FULL_TIME,ACTIVE
+EMP006,Nguyen Thi Fong,fong.nguyen@company.com,0956789012,1.35E7,2022-11-30,MARKETING,FULL_TIME,INACTIVE
+EMP007,Vo Van Gia,gia.vo@company.com,0967890123,8500000.0,2023-04-18,HR,PART_TIME,ACTIVE

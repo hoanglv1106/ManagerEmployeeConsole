@@ -2,7 +2,7 @@ package repository.io;
 
 import config.AppConfig;
 import config.FileConfig;
-import Model.Employee; // Đã sửa tên package viết thường
+import model.Employee; // Đã sửa tên package viết thường
 
 import java.io.BufferedWriter;
 import java.io.IOException;

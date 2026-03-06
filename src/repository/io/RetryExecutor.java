@@ -22,7 +22,7 @@ public class RetryExecutor {
                 System.err.printf("[RetryExecutor] Tác vụ '%s' thất bại (lần %d/%d): %s%n",
                         actionName, attempt, FileConfig.MAX_RETRIES + 1, e.getMessage());
 
-                if (attempt <= FileConfig.MAX_RETRIES) { // còn lượt retry → sleep rồi tiếp tục
+                if (attempt <= FileConfig.MAX_RETRIES) {
                     try {
                         Thread.sleep(500L * attempt);
                     } catch (InterruptedException ie) {

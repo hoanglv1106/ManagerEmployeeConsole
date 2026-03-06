@@ -37,7 +37,7 @@ public class SalaryReportTask implements Runnable {
 
         List<Employee> allEmployees = service.getAll();
 
-        // Nếu chưa có nhân viên nào thì thông báo nhẹ nhàng rồi thoát, tránh in ra số Infinity
+        // Nếu chưa có nhân viên nào thì thông báo rồi thoát, tránh in ra số Infinity
         if (allEmployees.isEmpty()) {
             System.out.println("  [!] Hiện tại chưa có dữ liệu nhân viên nào trong hệ thống.");
             System.out.println("=".repeat(60) + "\n");
